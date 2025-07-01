@@ -1,0 +1,194 @@
+header{
+  background-color: yellow;
+  
+}
+.contenedor {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+.perfil {
+ background: #fff;
+ border-radius: 15px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ padding: 20px;
+ text-align: center;
+ width: 250px;
+ transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.perfil:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.perfil img {
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+ object-fit: cover;
+ margin-bottom: 10px;
+}
+
+.perfil button {
+  margin-top: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.perfil button:hover {
+  background: #1d4ed8;
+}
+
+.imagen-circular {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+}
+.derecha {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+.parrafos p {
+margin-bottom: 5px;
+}
+.botones {
+display: flex;
+gap: 10px;
+}
+.botones button {
+padding: 8px 16px;
+font-size: 16px;
+}
+.imagenes-inferiores {
+display: flex;
+gap: 10px;
+}
+.imagenes-inferiores img {
+width: 100px;
+height: auto;
+}
+.botones {
+  display: flex;
+  gap: 10px;
+}
+button:hover{
+cursor: pointer;
+}
+button{
+border-radius: 30px;
+  color: blue;
+  background-color: aquamarine;
+  border-color: none;
+}
+.botones button {
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+.imagenes-chicas img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: yellow;
+  padding: 20px;
+  text-align: center;
+}
+
+header .Logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
+  padding: 40px 20px;
+}
+
+.perfil {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 95%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.perfil:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.perfil img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.perfil h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.perfil p {
+  font-size: 1em;
+  color: #666;
+}
+
+.perfil button {
+  margin-top: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.perfil button:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
