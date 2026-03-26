@@ -28,14 +28,14 @@ nav a:hover { color: var(--primario); }
 .contenedor { display: flex; align-items: center; justify-content: center; gap: 50px; padding: 80px 10%; flex-wrap: wrap; }
 .Izquierda .foto-perfil { width: 180px; height: 180px; border-radius: 50%; border: 3px solid var(--primario); object-fit: cover; }
 .Derecha { max-width: 500px; }
-.Botones-Redes a { color: var(--texto-dim); margin-right: 15px; text-decoration: none; font-size: 1.1em; transition: 0.3s;}
+.carrera { color: var(--primario); font-weight: bold; margin: 10px 0; }
+.Botones-Redes a { color: var(--texto-dim); margin-right: 15px; text-decoration: none; font-size: 1.1em; transition: 0.3s; }
 .Botones-Redes a:hover { color: var(--primario); }
 
 /* SECCIÓN HABILIDADES */
 .seccion-oscura { background-color: #0d1117; padding: 60px 10%; }
 .grid-habilidades { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; }
-.habilidad-card { background: var(--tarjeta); padding: 25px; border-radius: 12px; text-align: center; border: 1px solid #30363d; transition: 0.3s; }
-.habilidad-card:hover { border-color: var(--primario); }
+.habilidad-card { background: var(--tarjeta); padding: 25px; border-radius: 12px; text-align: center; border: 1px solid #30363d; }
 .habilidad-card i { font-size: 2.5em; color: var(--primario); margin-bottom: 15px; }
 
 /* PROYECTOS */
@@ -46,58 +46,19 @@ nav a:hover { color: var(--primario); }
 .perfil img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; }
 .perfil button { background: transparent; border: 1px solid var(--primario); color: var(--primario); padding: 10px; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 15px; font-weight: bold; }
 
-/* --- SECCIÓN RECURSOS (DRIVE Y CV) --- */
-.seccion-recursos {
-    padding: 80px 10%;
-    text-align: center;
-}
-
-.botones-finales {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.btn-recurso {
-    padding: 18px 35px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.drive {
-    background-color: #1e1e1e;
-    color: white;
-    border: 1px solid #333;
-}
-
-.drive:hover {
-    background-color: #2a2a2a;
-    border-color: var(--primario);
-}
-
-.cv {
-    background-color: var(--primario);
-    color: white;
-}
-
-.cv:hover {
-    background-color: #1a66d6;
-    box-shadow: 0 5px 20px rgba(47, 129, 247, 0.4);
-}
+/* SECCIÓN RECURSOS FINALES */
+.seccion-recursos { padding: 80px 10%; text-align: center; background: #0d1117; }
+.botones-finales { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-top: 30px; }
+.btn-recurso { padding: 18px 35px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.1em; display: flex; align-items: center; gap: 12px; transition: 0.3s; }
+.drive { background: transparent; border: 1px solid #30363d; color: var(--texto); }
+.drive:hover { border-color: var(--primario); background: #1c2128; }
+.cv { background: var(--primario); color: white; border: none; }
+.cv:hover { background: #1a66d6; box-shadow: 0 5px 15px rgba(47, 129, 247, 0.4); }
 
 /* MODALES */
 .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); }
 .modal-contenido { background-color: var(--tarjeta); margin: 8% auto; padding: 40px; border: 1px solid var(--primario); width: 60%; border-radius: 15px; position: relative; }
+.modal-contenido h3 { color: var(--primario); margin-top: 0; }
 .cerrar { position: absolute; right: 25px; top: 15px; color: var(--texto-dim); font-size: 30px; cursor: pointer; }
 
 footer { text-align: center; padding: 50px; color: var(--texto-dim); border-top: 1px solid #30363d; margin-top: 60px; }
