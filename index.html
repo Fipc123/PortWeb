@@ -80,4 +80,62 @@
                     <img src="https://via.placeholder.com/300x150?text=En+Desarrollo" alt="Nuevo Proyecto">
                     <h3>Nuevo Proyecto</h3>
                     <p>En desarrollo para el portafolio final.</p>
-                    <button disabled>Pró
+                    <button disabled>Próximamente</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="Recursos" class="seccion-recursos">
+            <h2 class="titulo-seccion">Comunicación y Descargas</h2>
+            <div class="botones-finales">
+                <a href="TU_LINK_DE_DRIVE_AQUI" target="_blank" class="btn-recurso drive">
+                    <i class="fab fa-google-drive"></i> Mi Portafolio en Drive
+                </a>
+                <a href="Tu_CV_Felipe_Pacheco.pdf" download class="btn-recurso cv">
+                    <i class="fas fa-file-download"></i> Descargar mi CV
+                </a>
+            </div>
+        </section>
+
+        <div id="modalThief" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal('modalThief')">&times;</span>
+                <h3>Thief Cats</h3>
+                <p><strong>Rol:</strong> Modelador 3D / Diseño de escenarios / Game Design</p>
+                <p><strong>Herramientas:</strong> Blender, Unity</p>
+                <p><strong>Descripción:</strong> Creación de objetos de interiores para entorno de juego online e integración en tiempo real.</p>
+            </div>
+        </div>
+
+        <div id="modalPaper" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal('modalPaper')">&times;</span>
+                <h3>PaperCatTD</h3>
+                <p><strong>Rol:</strong> Modelador 3D</p>
+                <p><strong>Herramientas:</strong> Blender, Unity</p>
+                <p><strong>Descripción:</strong> Creación de bases para aparición del jugador y enemigos en experiencia de AR de celular.</p>
+            </div>
+        </div>
+
+        <div id="modalPL" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal('modalPL')">&times;</span>
+                <h3>ProjectPL</h3>
+                <p><strong>Rol:</strong> Modelador 3D / Diseño de escenarios / Game Design</p>
+                <p><strong>Herramientas:</strong> Blender, Unity</p>
+                <p><strong>Descripción:</strong> Creación de objetos de interiores para juego de terror con temática de instalaciones secretas.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Felipe Pacheco | Ingeniería en Realidad Virtual</p>
+    </footer>
+
+    <script>
+        function abrirModal(id) { document.getElementById(id).style.display = "block"; }
+        function cerrarModal(id) { document.getElementById(id).style.display = "none"; }
+        window.onclick = function(event) { if (event.target.className === 'modal') { event.target.style.display = "none"; } }
+    </script>
+</body>
+</html>
