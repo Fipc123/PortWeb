@@ -1,4 +1,3 @@
-/* --- VARIABLES DE COLOR --- */
 :root {
     --fondo: #0a0e14;
     --tarjeta: #161b22;
@@ -9,115 +8,56 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--fondo);
-    color: var(--texto);
+    margin: 0; padding: 0;
+    background-color: var(--fondo); color: var(--texto);
     scroll-behavior: smooth;
 }
 
 header {
     background-color: rgba(10, 14, 20, 0.9);
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #30363d;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 20px 5%; display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid #30363d; position: sticky; top: 0; z-index: 1000;
 }
 
-header .Logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--primario);
-    letter-spacing: 2px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--texto);
-    padding: 0 15px;
-    font-weight: 500;
-}
-
+header .Logo { font-size: 1.5em; font-weight: bold; color: var(--primario); }
+nav a { text-decoration: none; color: var(--texto); padding: 0 15px; font-weight: 500; transition: 0.3s; }
 nav a:hover { color: var(--primario); }
 
-.contenedor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 60px 10%;
-    flex-wrap: wrap;
-}
-
-.Izquierda .foto-perfil {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 3px solid var(--primario);
-    object-fit: cover;
-}
-
+/* SECCIÓN PRESENTACIÓN */
+.contenedor { display: flex; align-items: center; justify-content: center; gap: 50px; padding: 80px 10%; flex-wrap: wrap; }
+.Izquierda .foto-perfil { width: 180px; height: 180px; border-radius: 50%; border: 3px solid var(--primario); object-fit: cover; }
 .Derecha { max-width: 500px; }
-.Derecha h1 { font-size: 2.5em; margin: 0; }
-.carrera { color: var(--primario); font-size: 1.2em; font-weight: bold; margin: 5px 0; }
-.detalle { color: var(--texto-dim); margin-bottom: 20px; }
+.carrera { color: var(--primario); font-weight: bold; margin: 10px 0; }
 
 .Botones-Principales { display: flex; gap: 15px; margin: 20px 0; }
-.btn { padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; }
+.btn { padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
 .btn-contacto { background-color: var(--primario); color: white; }
 .btn-cv { border: 2px solid var(--primario); color: var(--primario); }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(47, 129, 247, 0.4); }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(47, 129, 247, 0.3); }
 
-.Botones-Redes a { color: var(--texto-dim); margin-right: 15px; text-decoration: none; font-size: 0.9em; }
-.imagenes-chicas img { height: 40px; width: 40px; border-radius: 8px; margin-right: 10px; opacity: 0.7; }
+/* SECCIÓN HABILIDADES */
+.seccion-oscura { background-color: #0d1117; padding: 60px 10%; }
+.grid-habilidades { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; }
+.habilidad-card { background: var(--tarjeta); padding: 25px; border-radius: 12px; text-align: center; border: 1px solid #30363d; }
+.habilidad-card i { font-size: 2.5em; color: var(--primario); margin-bottom: 15px; }
 
-.titulo-seccion { text-align: center; margin: 50px 0 20px 0; font-size: 2.5em; }
+/* TIMELINE EDUCACIÓN */
+.timeline { max-width: 800px; margin: 0 auto; padding: 40px 20px; border-left: 2px solid var(--primario); }
+.timeline-item { margin-bottom: 30px; padding-left: 30px; position: relative; }
+.timeline-item::before { content: ""; position: absolute; left: -11px; top: 5px; width: 20px; height: 20px; background: var(--primario); border-radius: 50%; }
+.fecha { color: var(--primario); font-weight: bold; }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 40px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.perfil {
-    background: var(--tarjeta);
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #30363d;
-    transition: 0.3s;
-}
-
-.perfil:hover { border-color: var(--primario); transform: translateY(-5px); }
-
-.perfil img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.perfil p { font-size: 0.9em; color: var(--texto-dim); min-height: 50px; }
-
-.perfil button {
-    background: transparent;
-    border: 1px solid var(--primario);
-    color: var(--primario);
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-}
-
+/* PROYECTOS */
+.titulo-seccion { text-align: center; margin-bottom: 40px; font-size: 2.2em; color: var(--primario); }
+.container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 0 5%; max-width: 1200px; margin: 0 auto; }
+.perfil { background: var(--tarjeta); border-radius: 12px; padding: 15px; text-align: center; border: 1px solid #30363d; }
+.perfil img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; }
+.perfil button { background: transparent; border: 1px solid var(--primario); color: var(--primario); padding: 10px; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 15px; font-weight: bold; transition: 0.3s; }
 .perfil button:hover { background: var(--primario); color: white; }
 
-footer { text-align: center; padding: 40px; color: var(--texto-dim); border-top: 1px solid #30363d; }
+/* MODALES */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); }
+.modal-contenido { background-color: var(--tarjeta); margin: 8% auto; padding: 40px; border: 1px solid var(--primario); width: 60%; border-radius: 15px; position: relative; }
+.cerrar { position: absolute; right: 25px; top: 15px; color: var(--texto-dim); font-size: 30px; cursor: pointer; }
+
+footer { text-align: center; padding: 50px; color: var(--texto-dim); border-top: 1px solid #30363d; margin-top: 60px; }
