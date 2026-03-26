@@ -4,6 +4,7 @@
     --primario: #2f81f7; 
     --texto: #f0f6fc;
     --texto-dim: #8b949e;
+    --exito: #238636; /* Color verde para el botón de descarga */
 }
 
 body {
@@ -20,40 +21,78 @@ header {
 }
 
 header .Logo { font-size: 1.5em; font-weight: bold; color: var(--primario); }
-nav a { text-decoration: none; color: var(--texto); padding: 0 15px; font-weight: 500; transition: 0.3s; }
-nav a:hover { color: var(--primario); }
+nav a { text-decoration: none; color: var(--texto); padding: 0 15px; font-weight: 500; }
 
-/* SECCIÓN PRESENTACIÓN */
 .contenedor { display: flex; align-items: center; justify-content: center; gap: 50px; padding: 80px 10%; flex-wrap: wrap; }
 .Izquierda .foto-perfil { width: 180px; height: 180px; border-radius: 50%; border: 3px solid var(--primario); object-fit: cover; }
 .Derecha { max-width: 500px; }
-.carrera { color: var(--primario); font-weight: bold; margin: 10px 0; }
+.Botones-Redes a { color: var(--texto-dim); margin-right: 15px; text-decoration: none; font-size: 1.1em; }
 
-.Botones-Principales { display: flex; gap: 15px; margin: 20px 0; }
-.btn { padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-.btn-contacto { background-color: var(--primario); color: white; }
-.btn-cv { border: 2px solid var(--primario); color: var(--primario); }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(47, 129, 247, 0.3); }
-
-/* SECCIÓN HABILIDADES */
+/* HABILIDADES */
 .seccion-oscura { background-color: #0d1117; padding: 60px 10%; }
 .grid-habilidades { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; }
 .habilidad-card { background: var(--tarjeta); padding: 25px; border-radius: 12px; text-align: center; border: 1px solid #30363d; }
 .habilidad-card i { font-size: 2.5em; color: var(--primario); margin-bottom: 15px; }
 
-/* TIMELINE EDUCACIÓN */
+/* EDUCACIÓN */
 .timeline { max-width: 800px; margin: 0 auto; padding: 40px 20px; border-left: 2px solid var(--primario); }
 .timeline-item { margin-bottom: 30px; padding-left: 30px; position: relative; }
 .timeline-item::before { content: ""; position: absolute; left: -11px; top: 5px; width: 20px; height: 20px; background: var(--primario); border-radius: 50%; }
-.fecha { color: var(--primario); font-weight: bold; }
 
 /* PROYECTOS */
 .titulo-seccion { text-align: center; margin-bottom: 40px; font-size: 2.2em; color: var(--primario); }
 .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 0 5%; max-width: 1200px; margin: 0 auto; }
-.perfil { background: var(--tarjeta); border-radius: 12px; padding: 15px; text-align: center; border: 1px solid #30363d; }
+.perfil { background: var(--tarjeta); border-radius: 12px; padding: 15px; text-align: center; border: 1px solid #30363d; transition: 0.3s; }
+.perfil:hover { border-color: var(--primario); transform: translateY(-5px); }
 .perfil img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; }
-.perfil button { background: transparent; border: 1px solid var(--primario); color: var(--primario); padding: 10px; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 15px; font-weight: bold; transition: 0.3s; }
-.perfil button:hover { background: var(--primario); color: white; }
+.perfil button { background: transparent; border: 1px solid var(--primario); color: var(--primario); padding: 10px; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 15px; font-weight: bold; }
+
+/* --- NUEVA SECCIÓN DE CONTACTO/RECURSOS --- */
+.seccion-contacto {
+    padding: 80px 10%;
+    background: linear-gradient(180deg, #0a0e14 0%, #0d1117 100%);
+    text-align: center;
+}
+
+.botones-comunicacion {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-com {
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    border: 1px solid #30363d;
+    background: var(--tarjeta);
+    color: var(--texto);
+}
+
+.btn-com:hover {
+    border-color: var(--primario);
+    background: #1c2128;
+    transform: translateY(-3px);
+}
+
+.btn-resaltado {
+    background: var(--exito);
+    border-color: var(--exito);
+    color: white;
+}
+
+.btn-resaltado:hover {
+    background: #2ea043;
+    border-color: #2ea043;
+    box-shadow: 0 5px 15px rgba(35, 134, 54, 0.4);
+}
 
 /* MODALES */
 .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); }
