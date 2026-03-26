@@ -4,7 +4,7 @@
     --primario: #2f81f7; 
     --texto: #f0f6fc;
     --texto-dim: #8b949e;
-    --exito: #238636; /* Color verde para el botón de descarga */
+    --exito: #238636;
 }
 
 body {
@@ -22,22 +22,21 @@ header {
 
 header .Logo { font-size: 1.5em; font-weight: bold; color: var(--primario); }
 nav a { text-decoration: none; color: var(--texto); padding: 0 15px; font-weight: 500; }
+nav a:hover { color: var(--primario); }
 
+/* SECCIÓN PRESENTACIÓN */
 .contenedor { display: flex; align-items: center; justify-content: center; gap: 50px; padding: 80px 10%; flex-wrap: wrap; }
 .Izquierda .foto-perfil { width: 180px; height: 180px; border-radius: 50%; border: 3px solid var(--primario); object-fit: cover; }
 .Derecha { max-width: 500px; }
-.Botones-Redes a { color: var(--texto-dim); margin-right: 15px; text-decoration: none; font-size: 1.1em; }
+.Botones-Redes a { color: var(--texto-dim); margin-right: 15px; text-decoration: none; font-size: 1.1em; transition: 0.3s;}
+.Botones-Redes a:hover { color: var(--primario); }
 
-/* HABILIDADES */
+/* SECCIÓN HABILIDADES */
 .seccion-oscura { background-color: #0d1117; padding: 60px 10%; }
 .grid-habilidades { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; }
-.habilidad-card { background: var(--tarjeta); padding: 25px; border-radius: 12px; text-align: center; border: 1px solid #30363d; }
+.habilidad-card { background: var(--tarjeta); padding: 25px; border-radius: 12px; text-align: center; border: 1px solid #30363d; transition: 0.3s; }
+.habilidad-card:hover { border-color: var(--primario); }
 .habilidad-card i { font-size: 2.5em; color: var(--primario); margin-bottom: 15px; }
-
-/* EDUCACIÓN */
-.timeline { max-width: 800px; margin: 0 auto; padding: 40px 20px; border-left: 2px solid var(--primario); }
-.timeline-item { margin-bottom: 30px; padding-left: 30px; position: relative; }
-.timeline-item::before { content: ""; position: absolute; left: -11px; top: 5px; width: 20px; height: 20px; background: var(--primario); border-radius: 50%; }
 
 /* PROYECTOS */
 .titulo-seccion { text-align: center; margin-bottom: 40px; font-size: 2.2em; color: var(--primario); }
@@ -47,51 +46,53 @@ nav a { text-decoration: none; color: var(--texto); padding: 0 15px; font-weight
 .perfil img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; }
 .perfil button { background: transparent; border: 1px solid var(--primario); color: var(--primario); padding: 10px; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 15px; font-weight: bold; }
 
-/* --- NUEVA SECCIÓN DE CONTACTO/RECURSOS --- */
-.seccion-contacto {
+/* --- SECCIÓN RECURSOS (DRIVE Y CV) --- */
+.seccion-recursos {
     padding: 80px 10%;
-    background: linear-gradient(180deg, #0a0e14 0%, #0d1117 100%);
     text-align: center;
 }
 
-.botones-comunicacion {
+.botones-finales {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.btn-com {
-    padding: 15px 30px;
-    border-radius: 10px;
+.btn-recurso {
+    padding: 18px 35px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     transition: 0.3s;
-    border: 1px solid #30363d;
-    background: var(--tarjeta);
-    color: var(--texto);
+    border: none;
+    cursor: pointer;
 }
 
-.btn-com:hover {
+.drive {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #333;
+}
+
+.drive:hover {
+    background-color: #2a2a2a;
     border-color: var(--primario);
-    background: #1c2128;
-    transform: translateY(-3px);
 }
 
-.btn-resaltado {
-    background: var(--exito);
-    border-color: var(--exito);
+.cv {
+    background-color: var(--primario);
     color: white;
 }
 
-.btn-resaltado:hover {
-    background: #2ea043;
-    border-color: #2ea043;
-    box-shadow: 0 5px 15px rgba(35, 134, 54, 0.4);
+.cv:hover {
+    background-color: #1a66d6;
+    box-shadow: 0 5px 20px rgba(47, 129, 247, 0.4);
 }
 
 /* MODALES */
