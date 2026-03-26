@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felipe Pacheco | Portafolio VR</title>
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="Logo">FP PORTAFOLIO</div>
         <nav>
             <a href="#SobreMi">Quién Soy</a>
+            <a href="#Habilidades">Habilidades</a>
+            <a href="#Trayectoria">Educación</a>
             <a href="#Proyectos">Proyectos</a>
-            <a href="pagina2.html">Otra Página</a>
         </nav>
     </header>
 
@@ -34,13 +36,39 @@
                 </div>
 
                 <div class="Botones-Redes">
-                    <a href="https://www.instagram.com/?flo=true" target="_blank">Instagram</a>
-                    <a href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
+            </div>
+        </section>
 
-                <div class="imagenes-chicas">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEsXytCt0Hsmmsm_GpTewCRHUoAr49mt5EtkICFpEfVe31k31MbuwuqM9Msx2IzLRXc0w&usqp=CAU" alt="Tecnología 1">
-                    <img src="https://play-lh.googleusercontent.com/KCMTYuiTrKom4Vyf0G4foetVOwhKWzNbHWumV73IXexAIy5TTgZipL52WTt8ICL-oIo" alt="Tecnología 2">
+        <section id="Habilidades" class="seccion-oscura">
+            <h2 class="titulo-seccion">Habilidades Técnicas</h2>
+            <div class="grid-habilidades">
+                <div class="habilidad-card"><i class="fab fa-unity"></i><p>Unity 3D</p></div>
+                <div class="habilidad-card"><i class="fas fa-code"></i><p>C# Scripting</p></div>
+                <div class="habilidad-card"><i class="fas fa-cube"></i><p>Blender / Modelado</p></div>
+                <div class="habilidad-card"><i class="fas fa-vr-cardboard"></i><p>Meta SDK / VR</p></div>
+                <div class="habilidad-card"><i class="fab fa-git-alt"></i><p>Git / GitHub</p></div>
+            </div>
+        </section>
+
+        <section id="Trayectoria">
+            <h2 class="titulo-seccion">Educación</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="fecha">2022 - Presente</div>
+                    <div class="contenido">
+                        <h3>Ingeniería en Realidad Virtual</h3>
+                        <p>Universidad de Chile (o la tuya) - 4to año.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="fecha">2024</div>
+                    <div class="contenido">
+                        <h3>Desarrollo de Experiencias VR</h3>
+                        <p>Especialización en interacción y optimización 3D.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -48,41 +76,61 @@
         <section id="Proyectos">
             <h2 class="titulo-seccion">Mis Proyectos</h2>
             <div class="container">
-                
                 <div class="perfil">
                     <img src="Imagenes/Captura de pantalla 2025-06-30 021328.jpg" alt="Juego Clicker">
                     <h3>Juego Clicker</h3>
-                    <p>Trabajo desarrollado de juego tipo "Clicker" con Unity.</p>
-                    <a href="pagina_proyecto1.html"><button>Ver Detalles</button></a>
+                    <p>Clicker interactivo en Unity.</p>
+                    <button onclick="abrirModal('modal1')">Ver Detalles</button>
                 </div>
 
                 <div class="perfil">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMfvCqG1NEdLNW0UV6U9Rz-uro8xs6NWnCkg&s" alt="Proyecto 2">
-                    <h3>Proyecto 2</h3>
-                    <p>Espacio reservado para segundo proyecto de carrera.</p>
-                    <button>Próximamente</button>
+                    <h3>Entorno VR</h3>
+                    <p>Espacio reservado proyecto 2.</p>
+                    <button onclick="abrirModal('modal2')">Ver Detalles</button>
                 </div>
 
                 <div class="perfil">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpBLKrZS8qLZNY4oVZkMeJWTDVIQQqIwQ5yB48Pnr0r7jf4brThqVGayMejwYS_idykqM&usqp=CAU" alt="Proyecto 3">
-                    <h3>Proyecto 3</h3>
-                    <p>Espacio dedicado para futuros desarrollos en Realidad Virtual.</p>
-                    <button>Ver más</button>
+                    <h3>Modelado 3D</h3>
+                    <p>Espacio reservado proyecto 3.</p>
+                    <button onclick="abrirModal('modal3')">Ver Detalles</button>
                 </div>
 
                 <div class="perfil">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiE26ff46aKpfHCPy88HJkziodR9zd2jFhlg&s" alt="Proyecto 4">
-                    <h3>Proyecto 4</h3>
-                    <p>Sera utilizada para guardar mis proyectos futuros.</p>
-                    <button>Ver más</button>
+                    <h3>Proyecto Final</h3>
+                    <p>Espacio reservado proyecto 4.</p>
+                    <button onclick="abrirModal('modal4')">Ver Detalles</button>
                 </div>
-
             </div>
         </section>
+
+        <div id="modal1" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal('modal1')">&times;</span>
+                <h3>Detalles: Juego Clicker</h3>
+                <p>Aquí puedes explicar los retos técnicos: optimización de UI, sistema de guardado, etc.</p>
+                <img src="Imagenes/Captura de pantalla 2025-06-30 021328.jpg" style="width:100%; margin-top:15px; border-radius:10px;">
+            </div>
+        </div>
+
+        <div id="modal2" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modal2')">&times;</span><h3>Proyecto 2</h3><p>Información del proyecto 2...</p></div></div>
+        <div id="modal3" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modal3')">&times;</span><h3>Proyecto 3</h3><p>Información del proyecto 3...</p></div></div>
+        <div id="modal4" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modal4')">&times;</span><h3>Proyecto 4</h3><p>Información del proyecto 4...</p></div></div>
+
     </main>
 
     <footer>
         <p>© 2026 Felipe Pacheco | Ingeniería VR</p>
     </footer>
+
+    <script>
+        function abrirModal(id) { document.getElementById(id).style.display = "block"; }
+        function cerrarModal(id) { document.getElementById(id).style.display = "none"; }
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') { event.target.style.display = "none"; }
+        }
+    </script>
 </body>
 </html>
